@@ -1,0 +1,17 @@
+commonLabels:
+  app: whoami-custom
+
+nameSuffix: -custom
+
+resources:
+  - ../base
+  - ingress.yaml
+
+secretGenerator:
+  - name: whoami-certificate
+    type: kubernetes.io/tls
+    options:
+      disableNameSuffixHash: true
+    files:
+    - tls.crt=whoami.crt
+    - tls.key=whoami.key

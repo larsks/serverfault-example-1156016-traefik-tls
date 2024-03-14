@@ -1,0 +1,8 @@
+commonLabels:
+  app: whoami-default
+
+nameSuffix: -default
+
+resources:
+  - ../base
+  - ingress.yaml

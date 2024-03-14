@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: whoami
+spec:
+  template:
+    spec:
+      containers:
+        - name: whoami
+          image: docker.io/traefik/whoami:latest
+          ports:
+            - name: http
+              containerPort: 80
